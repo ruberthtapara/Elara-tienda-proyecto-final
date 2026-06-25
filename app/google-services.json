@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "359334920294",
+    "project_id": "stylegen-ai-2d349",
+    "storage_bucket": "stylegen-ai-2d349.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359334920294:android:7146ad4ec3d2cef19f2da7",
+        "android_client_info": {
+          "package_name": "com.example.proyect_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjJGI7l9LV7l8KBNzdAY1iaG1-3rMdLyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
