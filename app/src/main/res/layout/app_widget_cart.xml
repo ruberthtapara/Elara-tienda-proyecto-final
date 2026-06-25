@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    MODIFICADO PARA EL EJERCICIO FINAL (CORRECCIÓN DE CARGA):
+    1. Reemplazado '<View>' (que no es soportado por RemoteViews y causaba 'Class not allowed to be inflated')
+       por un '<FrameLayout>' vacío como espaciador compatible.
+    2. Reemplazado '<Button>' por '<TextView>' con 'gravity="center"' para evitar crashes de temas de Material
+       en el proceso SystemUI del sistema operativo.
+    3. Reemplazado el ImageView de sistema por un TextView con un emoji 🛒 para garantizar compatibilidad
+       y estética sin usar recursos del sistema que puedan variar.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/app_widget_background"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Fila de Encabezado: Título de la Aplicación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/widget_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elara AI"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Espaciador usando FrameLayout (100% compatible con RemoteViews) -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Emoji de Carrito moderno y compatible -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Estado del Carrito (Información Dinámica en Tiempo Real) -->
+    <TextView
+        android:id="@+id/widget_cart_count_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tienes 0 prendas en tu carrito"
+        android:textColor="#CBD5E1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Mensaje Comercial / Consejos cortos de IA -->
+    <TextView
+        android:id="@+id/widget_subtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Aprovecha antes de que se agoten!"
+        android:textColor="#94A3B8"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botones de Acción / Atajos Directos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Botón 1: Abrir Carrito de compras -->
+        <TextView
+            android:id="@+id/widget_btn_cart"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="🛒 Carrito"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/app_widget_button_background"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Botón 2: Abrir Estilista IA -->
+        <TextView
+            android:id="@+id/widget_btn_advisor"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1.2"
+            android:text="✨ Estilista IA"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/app_widget_button_background"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Botón 3: Abrir Catálogo para seguir buscando -->
+        <TextView
+            android:id="@+id/widget_btn_catalog"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="🛍️ Tienda"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/app_widget_button_secondary_background"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</LinearLayout>

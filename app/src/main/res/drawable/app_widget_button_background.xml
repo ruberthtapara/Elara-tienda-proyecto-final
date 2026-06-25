@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    MODIFICADO PARA EL EJERCICIO FINAL:
+    Fondo para el botón primario del widget con color azul brillante (Cyan)
+    y esquinas redondeadas siguiendo las especificaciones de diseño.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#00A8E8" />
+    <corners android:radius="12dp" />
+</shape>

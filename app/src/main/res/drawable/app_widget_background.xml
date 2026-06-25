@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    MODIFICADO PARA EL EJERCICIO FINAL:
+    Fondo personalizado para el widget con bordes redondeados y temática oscura premium (Slate Blue)
+    siguiendo las guías de Material 3 y Android UI Kit para un aspecto minimalista y moderno.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#1A2035" /> <!-- Azul pizarra oscuro -->
+    <corners android:radius="24dp" /> <!-- Bordes muy redondeados según Material 3 -->
+    <stroke android:width="1.5dp" android:color="#334E68" />
+</shape>
